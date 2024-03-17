@@ -1,0 +1,178 @@
+{
+  "show me some lip essentials ": {
+    "text": "Here are the lip essentials you're looking for",
+    "list": [
+      {
+        "id": "a3e310b5-1659-4e68-a633-ca332056752d1",
+        "genericChoiceId": "11199510_946T",
+        "family": "Lip",
+        "name": "Flavored Lip Gloss",
+        "rating": 4.71,
+        "totalReviewCount": 755,
+        "productImages": [
+          ""
+        ],
+        "abed": {
+          "xyz": "123"
+        },
+        "price": "$9.95",
+        "altPrices": null
+      },
+      {
+        "id": "a3e310b5-1659-4e68-a633-ca332056752d2",
+        "genericChoiceId": "11199510_946T",
+        "family": "Lip",
+        "name": "Flavored Lip Gloss",
+        "rating": 4.71,
+        "totalReviewCount": 755,
+        "productImages": [
+          ""
+        ],
+        "abed": {
+          "xyz": "123"
+        },
+        "price": "$9.95",
+        "altPrices": null
+      },
+      {
+        "id": "a3e310b5-1659-4e68-a633-ca332056752d3",
+        "genericChoiceId": "11199510_946T",
+        "family": "Lip",
+        "name": "Flavored Lip Gloss",
+        "rating": 4.71,
+        "totalReviewCount": 755,
+        "productImages": [
+          ""
+        ],
+        "abed": {
+          "xyz": "123"
+        },
+        "price": "$9.95",
+        "altPrices": null
+      },
+      {
+        "id": "a3e310b5-1659-4e68-a633-ca332056752d4",
+        "genericChoiceId": "11199510_946T",
+        "family": "Lip",
+        "name": "Flavored Lip Gloss",
+        "rating": 4.71,
+        "totalReviewCount": 755,
+        "productImages": [
+          ""
+        ],
+        "abed": {
+          "xyz": "123"
+        },
+        "price": "$9.95",
+        "altPrices": null
+      },
+      {
+        "id": "a3e310b5-1659-4e68-a633-ca332056752d5",
+        "genericChoiceId": "11199510_946T",
+        "family": "Lip",
+        "name": "Flavored Lip Gloss",
+        "rating": 4.71,
+        "totalReviewCount": 755,
+        "productImages": [
+          ""
+        ],
+        "abed": {
+          "xyz": "123"
+        },
+        "price": "$9.95",
+        "altPrices": null
+      }
+    ]
+  },
+  "show me some other essentials ": {
+    "text": "Here are the other essentials you're looking for",
+    "list": [
+      {
+        "id": "a3e310b5-1659-4e68-a633-ca332056752d1",
+        "genericChoiceId": "11199510_946T",
+        "family": "Lip",
+        "name": "Flavored Lip Gloss",
+        "rating": 4.71,
+        "totalReviewCount": 755,
+        "productImages": [
+          ""
+        ],
+        "abed": {
+          "xyz": "123"
+        },
+        "price": "$9.95",
+        "altPrices": null
+      },
+      {
+        "id": "a3e310b5-1659-4e68-a633-ca332056752d2",
+        "genericChoiceId": "11199510_946T",
+        "family": "Lip",
+        "name": "Flavored Lip Gloss",
+        "rating": 4.71,
+        "totalReviewCount": 755,
+        "productImages": [
+          ""
+        ],
+        "abed": {
+          "xyz": "123"
+        },
+        "price": "$9.95",
+        "altPrices": null
+      },
+      {
+        "id": "a3e310b5-1659-4e68-a633-ca332056752d3",
+        "genericChoiceId": "11199510_946T",
+        "family": "Lip",
+        "name": "Flavored Lip Gloss",
+        "rating": 4.71,
+        "totalReviewCount": 755,
+        "productImages": [
+          ""
+        ],
+        "abed": {
+          "xyz": "123"
+        },
+        "price": "$9.95",
+        "altPrices": null
+      },
+      {
+        "id": "a3e310b5-1659-4e68-a633-ca332056752d4",
+        "genericChoiceId": "11199510_946T",
+        "family": "Lip",
+        "name": "Flavored Lip Gloss",
+        "rating": 4.71,
+        "totalReviewCount": 755,
+        "productImages": [
+          ""
+        ],
+        "abed": {
+          "xyz": "123"
+        },
+        "price": "$9.95",
+        "altPrices": null
+      },
+      {
+        "id": "a3e310b5-1659-4e68-a633-ca332056752d5",
+        "genericChoiceId": "11199510_946T",
+        "family": "Lip",
+        "name": "Flavored Lip Gloss",
+        "rating": 4.71,
+        "totalReviewCount": 755,
+        "productImages": [
+          ""
+        ],
+        "abed": {
+          "xyz": "123"
+        },
+        "price": "$9.95",
+        "altPrices": null
+      }
+    ]
+  },
+  "print int ": 12345,
+  "print": {
+    "hey": "Hello",
+    "age": 25
+  },
+  "print bool": false
+}
