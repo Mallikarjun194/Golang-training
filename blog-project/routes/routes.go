@@ -25,8 +25,8 @@ func addRouters(router *gin.Engine) {
 		routerProject.POST("", blogC.AddBlog)
 		routerProject.GET("", blogC.GetBlogs)
 		routerProject.GET(config.ID, blogC.GetBlogByID) // localhost:8080/blog/<id>
-		routerProject.PATCH("", blogC.UpdateBlogByID)
-		routerProject.POST("", blogC.DeleteBlogByID)
+		routerProject.PATCH(config.ID, blogC.UpdateBlogByID)
+		routerProject.DELETE(config.ID, blogC.DeleteBlogByID)
 
 	}
 
