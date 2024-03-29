@@ -2,6 +2,7 @@ package main
 
 import (
 	"blog-project/config"
+	"blog-project/database"
 	"blog-project/routes"
 	"fmt"
 	"net/http"
@@ -9,7 +10,11 @@ import (
 )
 
 func main() {
-	router := routes.SetupRouter()
+
+	db := database.OpenDBConn()
+	routerObj := routes.Router{DatabaseObj: db}
+
+	router := routerObj.SetupRouter()
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = config.DEFAULT_PORT

@@ -3,21 +3,26 @@ package routes
 import (
 	"blog-project/config"
 	"blog-project/controller"
-	"blog-project/model"
+	"blog-project/database"
 	"github.com/gin-gonic/gin"
 )
 
-func SetupRouter() *gin.Engine {
+type Router struct {
+	DatabaseObj database.Database
+}
+
+func (db *Router) SetupRouter() *gin.Engine {
 	router := gin.Default()
 
-	addRouters(router)
+	addRouters(router, db.DatabaseObj)
 	return router
 }
 
-func addRouters(router *gin.Engine) {
-	var blogMap = make(map[string]model.Blog) // in-memory
+func addRouters(router *gin.Engine, dbObj database.Database) {
+	//var blogMap = make(map[string]model.Blog) // in-memory
 	blogC := controller.BlogController{
-		BlogMap: blogMap,
+		//BlogMap:  blogMap,
+		Database: dbObj,
 	}
 
 	routerProject := router.Group(config.Blog)
