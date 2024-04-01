@@ -9,6 +9,9 @@ import (
 	"os"
 )
 
+// @title Blog Platform
+// @version v1
+// @description A microservice to retrieve blogs which are published.
 func main() {
 
 	db := database.OpenDBConn()

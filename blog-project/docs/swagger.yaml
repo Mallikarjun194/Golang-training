@@ -1,0 +1,131 @@
+definitions:
+  model.Abc:
+    properties:
+      age:
+        type: integer
+      name:
+        type: string
+    type: object
+  model.Blog:
+    properties:
+      abc:
+        $ref: '#/definitions/model.Abc'
+      author:
+        type: string
+      content:
+        type: string
+      createdAt:
+        type: string
+      id:
+        type: string
+      title:
+        type: string
+    required:
+    - author
+    - content
+    - title
+    type: object
+info:
+  contact: {}
+  description: A microservice to retrieve blogs which are published.
+  title: Blog Platform
+  version: v1
+paths:
+  /blog:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Successful
+          schema:
+            items:
+              $ref: '#/definitions/model.Blog'
+            type: array
+        "400":
+          description: Bad request
+          schema:
+            type: string
+        "500":
+          description: Internal server error
+          schema:
+            type: string
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: json payload
+        in: body
+        name: Request
+        required: true
+        schema:
+          $ref: '#/definitions/model.Blog'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Successful
+          schema:
+            $ref: '#/definitions/model.Blog'
+        "400":
+          description: Bad request
+          schema:
+            type: string
+        "500":
+          description: Internal server error
+          schema:
+            type: string
+  /blog/{id}:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: id
+        in: header
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Successful
+          schema:
+            $ref: '#/definitions/model.Blog'
+        "400":
+          description: Bad request
+          schema:
+            type: string
+        "500":
+          description: Internal server error
+          schema:
+            type: string
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: id
+        in: header
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Successful
+          schema:
+            items:
+              $ref: '#/definitions/model.Blog'
+            type: array
+        "400":
+          description: Bad request
+          schema:
+            type: string
+        "500":
+          description: Internal server error
+          schema:
+            type: string
+swagger: "2.0"

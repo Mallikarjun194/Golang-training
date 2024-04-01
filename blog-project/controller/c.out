@@ -1,0 +1,25 @@
+mode: set
+blog-project/controller/controller.go:19.50,23.16 3 1
+blog-project/controller/controller.go:23.16,29.3 3 1
+blog-project/controller/controller.go:30.2,35.16 4 1
+blog-project/controller/controller.go:35.16,38.3 2 0
+blog-project/controller/controller.go:40.2,41.34 2 1
+blog-project/controller/controller.go:45.51,56.16 3 0
+blog-project/controller/controller.go:56.16,59.3 2 0
+blog-project/controller/controller.go:60.2,61.20 2 0
+blog-project/controller/controller.go:61.20,63.3 1 0
+blog-project/controller/controller.go:63.8,65.3 1 0
+blog-project/controller/controller.go:66.2,67.31 2 0
+blog-project/controller/controller.go:71.54,81.16 5 1
+blog-project/controller/controller.go:81.16,86.3 4 1
+blog-project/controller/controller.go:87.2,88.29 2 0
+blog-project/controller/controller.go:91.57,102.16 5 0
+blog-project/controller/controller.go:102.16,106.3 3 0
+blog-project/controller/controller.go:107.2,108.16 2 0
+blog-project/controller/controller.go:108.16,112.3 3 0
+blog-project/controller/controller.go:113.2,114.103 2 0
+blog-project/controller/controller.go:118.57,123.16 5 0
+blog-project/controller/controller.go:123.16,127.3 3 0
+blog-project/controller/controller.go:135.2,136.16 2 0
+blog-project/controller/controller.go:136.16,140.3 3 0
+blog-project/controller/controller.go:141.2,142.106 2 0

@@ -6,7 +6,7 @@ import (
 	"gorm.io/gorm"
 )
 
-type databaseI interface {
+type DatabaseI interface {
 	Create(value any) error
 	FetchAll(value any) error
 	FetchByID(value any) error
@@ -49,3 +49,5 @@ func (d *Database) Delete(value any) error {
 func (d *Database) Update(value any) error {
 	return d.DB.Updates(value).Error
 }
+
+// mock-gen, mockery, counter-fitter!

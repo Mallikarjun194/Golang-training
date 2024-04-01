@@ -13,9 +13,17 @@ import (
 
 type BlogController struct {
 	//BlogMap  map[string]model.Blog
-	Database database.Database
+	Database database.DatabaseI
 }
 
+// AddBlog
+// @Accept json
+// @Produce json
+// @Param Request body model.Blog true "json payload"
+// @Success 201 {object} model.Blog "Successful"
+// @Failure 400 string true "Bad request"
+// @Failure 500 string true "Internal server error"
+// @Router /blog [post]
 func (b *BlogController) AddBlog(c *gin.Context) {
 	var blog model.Blog
 
@@ -42,6 +50,13 @@ func (b *BlogController) AddBlog(c *gin.Context) {
 
 }
 
+// GetBlogs
+// @Accept json
+// @Produce json
+// @Success 201 {object} []model.Blog "Successful"
+// @Failure 400 string true "Bad request"
+// @Failure 500 string true "Internal server error"
+// @Router /blog [get]
 func (b *BlogController) GetBlogs(c *gin.Context) {
 	var blogs []model.Blog
 	//if len(b.BlogMap) < 1 || b.BlogMap == nil {
@@ -68,6 +83,14 @@ func (b *BlogController) GetBlogs(c *gin.Context) {
 
 }
 
+// GetBlogByID
+// @Accept json
+// @Produce json
+// @Param id header string true "id"
+// @Success 201 {object} []model.Blog "Successful"
+// @Failure 400 string true "Bad request"
+// @Failure 500 string true "Internal server error"
+// @Router /blog/{id} [get]
 func (b *BlogController) GetBlogByID(c *gin.Context) {
 	ID := c.Param("id")
 	var blog model.Blog
@@ -80,13 +103,22 @@ func (b *BlogController) GetBlogByID(c *gin.Context) {
 	err := b.Database.FetchByID(&blog)
 	if err != nil {
 		logrus.Errorf("Blog with ID %s not found!", ID)
-		c.JSON(http.StatusNotFound, model.Error{Msg: fmt.Sprintf("Blog with ID %s not found!", ID)})
+		logrus.Error("Failed: ", err.Error())
+		c.JSON(http.StatusInternalServerError, model.Error{Msg: fmt.Sprintf("Blog with ID %s not found!", ID)})
 		return
 	}
 	logrus.Infof("Blog with ID %s is successfully fetch", ID)
 	c.JSON(http.StatusOK, blog)
 }
 
+// DeleteBlogByID
+// @Accept json
+// @Produce json
+// @Param id header string true "id"
+// @Success 201 {object} model.Blog "Successful"
+// @Failure 400 string true "Bad request"
+// @Failure 500 string true "Internal server error"
+// @Router /blog/{id} [delete]
 func (b *BlogController) DeleteBlogByID(c *gin.Context) {
 	ID := c.Param("id")
 	var blog model.Blog
